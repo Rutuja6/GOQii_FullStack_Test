@@ -64,4 +64,3 @@ Frontend: Open your browser and go to http://localhost:3000. This will load the 
 Backend: Ensure that XAMPP is running and navigate to http://localhost/GOQii_FullStack_Test/backend/api.php to access the PHP API.
 The frontend should now be able to communicate with the backend via API calls. Make sure both the frontend React server and the PHP backend are running simultaneously.
 
-
