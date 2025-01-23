@@ -1,6 +1,4 @@
-Your README file looks good, but I noticed a couple of improvements you can make to clarify the instructions and enhance readability. Here’s a refined version:
 
----
 
 # GOQii FullStack Test
 
