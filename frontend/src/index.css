@@ -1,0 +1,239 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4ff, #dce4f7);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form container */
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Label and Input side by side */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between label and input */
+}
+
+form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0; /* Remove bottom margin to keep labels in line with inputs */
+    width: 120px; /* Set a fixed width for the label */
+}
+
+form input {
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 2px solid #e0e6f0;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Make input field grow to take available space */
+}
+
+form input:focus {
+    border-color: #6A5ACD;
+    box-shadow: 0 0 6px rgba(106, 90, 205, 0.4);
+    outline: none;
+}
+
+form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6A5ACD, #00C6FF);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #0056b3, #004080);
+    transform: translateY(-3px);
+}
+
+/* Table container */
+.table-container {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+thead {
+    background-color: #6A5ACD;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e6f0;
+}
+
+th {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: rgba(106, 90, 205, 0.1);
+}
+
+button {
+    padding: 8px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.edit-btn {
+    background: #ffc107;
+    color: #212529;
+}
+
+.edit-btn:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+.delete-btn:hover {
+    background: #b02a37;
+    transform: translateY(-2px);
+}
+
+/* Zebra stripes */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Pagination container */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background: #6A5ACD;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.pagination button:hover {
+    background: #5a4ab8;
+    transform: translateY(-2px);
+}
+
+.pagination button.active {
+    background: #0046b5;
+    font-weight: bold;
+}
+
+/* Search box */
+.search-box {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-box input {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 250px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #6A5ACD;
+    box-shadow: 0 0 6px rgba(106, 90, 205, 0.4);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 0 15px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    /* Stack label and input vertically on small screens */
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    form label {
+        margin-bottom: 8px; /* Space between label and input when stacked */
+    }
+}
